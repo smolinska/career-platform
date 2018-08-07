@@ -1,0 +1,22 @@
+@import "../../assets/scss/variables.scss";
+
+.footer {
+  padding: $big-padding 0;
+}
+
+.footer-section {
+  a {
+    display: block;
+  }
+  .footer-title {
+    text-transform: uppercase;
+    padding-bottom: 25px;
+  }
+  .footer-link {
+    color: $light-grey;
+    padding: 3px 0;
+  }
+  .follow-icon {
+    padding-right: 10px;
+  }
+}
