@@ -1,0 +1,77 @@
+@import "../../assets/scss/variables.scss";
+
+%text-centered {
+  color: $white;
+  font-weight: bold;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.section {
+  padding: $big-padding 0;
+}
+
+.header {
+  font-family: 'Yanone Kaffeesatz', sans-serif;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+.header-dark {
+  font-size: 40px;
+  color: $black;
+}
+
+.job-title-wrapper {
+  display: flex;
+  align-items: center;
+  background-image: url("../../assets/img/job-bg.png");
+  .job-title-container {
+    background-color: rgba(0, 0, 0, 0.24);
+    padding: $medium-padding;
+    .title {
+      @extend %text-centered;
+      font-size: 70px;
+    }
+    .place {
+      @extend %text-centered;
+      font-size: 40px;
+    }
+  }
+}
+
+.job-form-wrapper {
+}
+
+.job-application-wrapper {
+  background-image: url("../../assets/img/job-bg.png");
+  .job-application-container {
+    color: $grey;
+    background: $white;
+    padding: $medium-padding;
+    ul.application-list {
+      padding: 15px;
+      li {
+        padding: 3px 0;
+      }
+    }
+    .contact {
+      padding: 15px 0;
+    }
+    .contact-title {
+      padding-bottom: $medium-padding;
+      font-weight: bold;
+    }
+    .normal {
+      color: $grey;
+    }
+    .lighter {
+      color: $light-grey;
+    }
+    .underlined {
+      text-decoration: underline;
+    }
+  }
+
+}

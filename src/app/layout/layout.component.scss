@@ -1,8 +1,8 @@
 @import "../../assets/scss/variables.scss";
 
 .navbar {
-  background: $dark;
-  color: $light;
+  background: $black;
+  color: $white;
   text-transform: uppercase;
   font-weight: bold;
   padding-left: 3em;
@@ -17,7 +17,7 @@
   li.nav-item {
     padding: 0 25px;
     .nav-link {
-      color: $light;
+      color: $white;
       &--active {
         text-decoration: underline;
       }
