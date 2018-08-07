@@ -17,6 +17,15 @@
     padding: 3px 0;
   }
   .follow-icon {
+    width: 25px;
     padding-right: 10px;
   }
+}
+
+hr {
+  width: 100%;
+  height: 1px;
+  color: $light-grey;
+  background-color: $light-grey;
+  border: none;
 }
