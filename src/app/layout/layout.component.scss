@@ -1,0 +1,29 @@
+@import "../../assets/scss/variables.scss";
+
+.navbar {
+  background: $dark;
+  color: $light;
+  text-transform: uppercase;
+  font-weight: bold;
+  padding-left: 3em;
+  .logo {
+    font-size: x-large;
+  }
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    padding-left: 10em;
+  }
+  li.nav-item {
+    padding: 0 25px;
+    .nav-link {
+      color: $light;
+      &--active {
+        text-decoration: underline;
+      }
+    }
+  }
+  .search-input {
+    min-width: 320px;
+  }
+}
