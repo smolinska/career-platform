@@ -18,7 +18,12 @@
   letter-spacing: 2px;
 }
 
-.header-dark {
+.header-dark-large {
+  font-size: 50px;
+  color: $black;
+}
+
+.header-dark-medium {
   font-size: 40px;
   color: $black;
 }
@@ -48,7 +53,7 @@
   background-image: url("../../assets/img/job-bg.png");
   .job-application-container {
     color: $grey;
-    background: $white;
+    background: $bg-grey;
     padding: $medium-padding;
     ul.application-list {
       padding: 15px;

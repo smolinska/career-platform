@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {JobModule} from './job/job.module';
 import {LayoutModule} from './layout/layout.module';
 import {HomeModule} from './home/home.module';
+import {HttpClientModule} from '@angular/common/http';
+import {JobService} from './services/job.service';
 
 
 @NgModule({
@@ -17,8 +19,11 @@ import {HomeModule} from './home/home.module';
     LayoutModule,
     HomeModule,
     JobModule,
+    HttpClientModule,
   ],
-  providers: [],
+  providers: [
+    JobService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

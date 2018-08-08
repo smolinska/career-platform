@@ -2,3 +2,8 @@
 @import "~bootstrap/dist/css/bootstrap.css";
 
 @import "assets/scss/variables.scss";
+
+
+body {
+  background-color: $bg-grey;
+}

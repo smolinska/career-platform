@@ -1,0 +1,92 @@
+<form [formGroup]="form" (ngSubmit)="onSubmit()">
+  <div class="row">
+    <div class="col-md-12">
+      <h5 class="input-label">Personal details *</h5>
+    </div>
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="text" class="form-control" id="firstName" placeholder="First name" formControlName="firstName"
+             required>
+    </div>
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="text" class="form-control" id="lastName" placeholder="Last name" formControlName="lastName" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="text" class="form-control" id="city" placeholder="City" formControlName="city" required>
+    </div>
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="text" class="form-control" id="country" placeholder="Country" formControlName="country" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="email" class="form-control" id="email" placeholder="Email" formControlName="email" required>
+    </div>
+    <div class="col-md-6 col-sm-12 form-group">
+      <input type="text" class="form-control" id="phone" placeholder="Phone number" formControlName="phone" required>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-sm-12 form-group">
+      <div>
+        <h5 class="input-label">Your motivation *</h5>
+      </div>
+      <textarea type="text" class="form-control" id="motivation" placeholder="Your motivation"
+                formControlName="motivation"
+                required></textarea>
+    </div>
+
+    <div class="col-md-6 col-sm-12 form-group">
+      <div>
+        <h5 class="input-label">Attatch your documents *</h5>
+      </div>
+      <div class="section-wrapper">
+        <div class="smaller-group left-col">
+          <div class="form-group input-label file-label">Resume *</div>
+          <div class="form-group input-label file-label">Portfolio</div>
+          <div class="form-group input-label file-label">Photo</div>
+        </div>
+        <div class="wider-group right-col">
+          <div class="form-group">
+            <label class="upload-label" for="resume">Upload</label>
+            <input type="file" id="resume" (change)="onFileChange($event)" #fileInput>
+          </div>
+          <div class="form-group">
+            <label class="upload-label" for="portfolio">Upload</label>
+            <input type="file" id="portfolio" (change)="onFileChange($event)" #fileInput>
+          </div>
+          <div class="form-group">
+            <label class="upload-label" for="photo">Upload</label>
+            <input type="file" id="photo" (change)="onFileChange($event)" #fileInput>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="row">
+    <div class="col-md-6 col-md-push-6">
+      <div class="section-wrapper">
+        <div class="smaller-group left-col">
+          <div class="form-group smaller-group no-bottom-margin">
+            <input type="checkbox" id="sendCopy" formControlName="sendCopy" value="true"> Send me a copy<br>
+          </div>
+        </div>
+        <div class="wider-group right-col">
+          <button type="submit" class="submit" [disabled]="form.invalid">
+            Apply for this job
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-md-pull-6">
+      <a class="lighter-underlined" href="#">
+        < Back to job description
+      </a>
+    </div>
+  </div>
+</form>
