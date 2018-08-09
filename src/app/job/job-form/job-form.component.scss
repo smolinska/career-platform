@@ -14,12 +14,38 @@
   cursor: pointer;
 }
 
-.col-md-push-6 {
-  left: 50%;
+@media (min-width: 768px) {
+  .col-md-push-6 {
+    left: 50%;
+  }
+
+  .col-md-pull-6 {
+    right: 50%;
+  }
 }
 
 .col-md-pull-6 {
-  right: 50%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.titled-row {
+  padding-top: $medium-padding;
+}
+
+@media (max-width: 767px) {
+  .motivation-group {
+    padding-bottom: $medium-padding;
+  }
+  textarea {
+    min-height: 0;
+  }
+}
+
+@media (min-width: 768px) {
+  textarea {
+    min-height: 152px;
+  }
 }
 
 input, textarea {
@@ -27,9 +53,7 @@ input, textarea {
   border-radius: 0;
 }
 
-textarea {
-  min-height: 70%;
-}
+
 
 input.ng-invalid.ng-touched {
   border: 1px solid red;
@@ -38,6 +62,7 @@ input.ng-invalid.ng-touched {
 
 .input-label {
   font-weight: bold;
+  padding-bottom: $small-padding;
 }
 
 .file-label {
@@ -80,4 +105,20 @@ input.ng-invalid.ng-touched {
 .submit {
   @extend %blue-button;
   border: none;
+}
+
+.apply-wrapper {
+  display: flex;
+  @media (min-width: 768px) and (max-width: 1200px) {
+    flex-direction: column-reverse;
+  }
+  @media (min-width: 1200px) and (max-width: 787px) {
+    align-items: center;
+  }
+}
+
+.right-col {
+  @media (max-width: 1200px) {
+    padding-bottom: $small-padding;
+  }
 }

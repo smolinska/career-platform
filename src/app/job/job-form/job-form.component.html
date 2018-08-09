@@ -1,5 +1,5 @@
 <form [formGroup]="form" (ngSubmit)="onSubmit()">
-  <div class="row">
+  <div class="row titled-row">
     <div class="col-md-12">
       <h5 class="input-label">Personal details *</h5>
     </div>
@@ -30,8 +30,8 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-6 col-sm-12 form-group">
+  <div class="row titled-row">
+    <div class="col-md-6 col-sm-12 form-group motivation-group">
       <div>
         <h5 class="input-label">Your motivation *</h5>
       </div>
@@ -68,9 +68,9 @@
     </div>
   </div>
 
-  <div class="row">
-    <div class="col-md-6 col-md-push-6">
-      <div class="section-wrapper">
+  <div class="row titled-row">
+    <div class="col-md-6 col-sm-12 col-md-push-6">
+      <div class="section-wrapper apply-wrapper">
         <div class="smaller-group left-col">
           <div class="form-group smaller-group no-bottom-margin">
             <input type="checkbox" id="sendCopy" formControlName="sendCopy" value="true"> Send me a copy<br>
@@ -83,7 +83,7 @@
         </div>
       </div>
     </div>
-    <div class="col-md-6 col-md-pull-6">
+    <div class="col-md-6 col-sm-12 col-md-pull-6">
       <a class="lighter-underlined" href="#">
         < Back to job description
       </a>
