@@ -5,15 +5,9 @@
   color: $white;
   text-transform: uppercase;
   font-weight: bold;
-  padding-left: 3em;
   .navbar-brand {
     font-size: xx-large;
     font-family: 'Yanone Kaffeesatz', sans-serif;
-  }
-  .navbar-collapse {
-    display: flex;
-    justify-content: space-between;
-    padding-left: 10em;
   }
   li.nav-item {
     padding: 0 25px;
@@ -26,5 +20,63 @@
   }
   .search-input {
     min-width: 320px;
+  }
+}
+
+@media (max-width: 991px) {
+  .top-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  .brand-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .navbar-brand {
+    padding-left: $small-padding;
+  }
+  .countbar {
+    display: none;
+  }
+  .searchbar, form, input.search-input {
+    width: 100%;
+  }
+}
+
+@media (min-width: 992px) {
+  .navbar-collapse {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+  .navbar {
+    flex-wrap: wrap;
+  }
+  .navbar-collapse {
+    flex-grow: 3;
+    justify-content: center;
+  }
+  .navbar-brand, .countbar {
+    flex-grow: 0.5;
+    justify-content: center;
+    text-align: right;
+  }
+  .countbar-mobile {
+    display: none;
+  }
+}
+
+@media (min-width: 992px) and (max-width: 1199px) {
+  .countbar {
+    width: 5%;
+  }
+  .searchbar, form, input.search-input {
+    width: 95%;
+  }
+  form, input.search-input {
+    width: 100%;
   }
 }
