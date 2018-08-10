@@ -3,6 +3,7 @@
 To download and run this project run:
 ```
 git@github.com:smolinska/career-platform.git
+cd career-platform
 npm install
 ng serve
 ```
