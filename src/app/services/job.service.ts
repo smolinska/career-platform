@@ -26,9 +26,9 @@ export class JobService {
       country: ['', Validators.required],
       phone: ['', Validators.required],
       motivation: ['', Validators.required],
-      resume: '',
-      protfolio: '',
-      photo: '',
+      resume: [null, Validators.required],
+      protfolio: null,
+      photo: null,
       sendCopy: false,
     });
   }

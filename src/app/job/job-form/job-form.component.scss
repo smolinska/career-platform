@@ -133,6 +133,17 @@ textarea.ng-valid {
 .submit {
   @extend %blue-button;
   border: none;
+  &:disabled {
+    background-color: $light-grey;
+    cursor: auto;
+  }
+}
+
+.submit-message {
+  text-align: center;
+  padding-top: $small-padding;
+  color: red;
+  font-weight: bold;
 }
 
 .apply-wrapper {

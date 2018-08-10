@@ -72,7 +72,8 @@
                 <a class="error" *ngFor="let error of resumeErrors">{{error}}<br/></a>
               </span>
             </label>
-            <input type="file" id="resume" (change)="onFileChange($event, fileTypes.Resume)" #fileInput>
+            <input type="file" id="resume" (change)="onFileChange($event, fileTypes.Resume)" #fileInput required>
+            <input type="hidden" id="resume" formControlName="resume" #fileInput required>
           </div>
           <div class="form-group">
             <label class="upload-label" for="portfolio">
@@ -110,11 +111,12 @@
           </div>
         </div>
         <div class="wider-group right-col">
-          <button type="submit" class="submit" [disabled]="form.invalid">
+          <button type="submit" class="submit" [disabled]="form.invalid && resume === null">
             Apply for this job
           </button>
         </div>
       </div>
+      <div class="submit-message" *ngIf="sendMessage">{{sendMessage}}</div>
     </div>
     <div class="col-md-6 col-sm-12 col-md-pull-6">
       <a class="lighter-underlined" href="#">
