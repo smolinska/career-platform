@@ -46,22 +46,55 @@
       </div>
       <div class="section-wrapper">
         <div class="smaller-group left-col">
-          <div class="form-group input-label file-label">Resume *</div>
-          <div class="form-group input-label file-label">Portfolio</div>
-          <div class="form-group input-label file-label">Photo</div>
+          <div class="form-group input-label file-label">
+            <a>Resume *</a>
+            <img *ngIf="resumeErrors.length === 0 && resumeErrors[0] !== 'empty'"
+                 src="../../../assets/img/check.png">
+          </div>
+          <div class="form-group input-label file-label">
+            <a>Portfolio</a>
+            <img *ngIf="portfolioErrors.length === 0 && portfolioErrors[0] !== 'empty'"
+                 src="../../../assets/img/check.png">
+          </div>
+          <div class="form-group input-label file-label">
+            <a>Photo</a>
+            <img *ngIf="photoErrors.length === 0 && photoErrors[0] !== 'empty'"
+                 src="../../../assets/img/check.png">
+          </div>
         </div>
-        <div class="wider-group right-col">
+        <div class="wider-group right-col not-expandable">
           <div class="form-group">
-            <label class="upload-label" for="resume">Upload</label>
-            <input type="file" id="resume" (change)="onFileChange($event)" #fileInput>
+            <label class="upload-label" for="resume">
+              <span *ngIf="resumeErrors.length === 0 || resumeErrors[0] === 'empty'">
+                <a>Upload<br/></a>
+              </span>
+              <span *ngIf="resumeErrors.length > 0 && resumeErrors[0] !== 'empty'">
+                <a class="error" *ngFor="let error of resumeErrors">{{error}}<br/></a>
+              </span>
+            </label>
+            <input type="file" id="resume" (change)="onFileChange($event, fileTypes.Resume)" #fileInput>
           </div>
           <div class="form-group">
-            <label class="upload-label" for="portfolio">Upload</label>
-            <input type="file" id="portfolio" (change)="onFileChange($event)" #fileInput>
+            <label class="upload-label" for="portfolio">
+              <span *ngIf="portfolioErrors.length === 0 || portfolioErrors[0] === 'empty'">
+                <a>Upload<br/></a>
+              </span>
+              <span *ngIf="portfolioErrors.length > 0 && portfolioErrors[0] !== 'empty'">
+                <a class="error" *ngFor="let error of portfolioErrors">{{error}}<br/></a>
+              </span>
+            </label>
+            <input type="file" id="portfolio" (change)="onFileChange($event, fileTypes.Portfolio)" #fileInput>
           </div>
           <div class="form-group">
-            <label class="upload-label" for="photo">Upload</label>
-            <input type="file" id="photo" (change)="onFileChange($event)" #fileInput>
+            <label class="upload-label" for="photo">
+              <span *ngIf="photoErrors.length === 0 || photoErrors[0] === 'empty'">
+                <a>Upload<br/></a>
+              </span>
+              <span *ngIf="photoErrors.length > 0 && photoErrors[0] !== 'empty'">
+                <a class="error" *ngFor="let error of photoErrors">{{error}}<br/></a>
+              </span>
+            </label>
+            <input type="file" id="photo" (change)="onFileChange($event, fileTypes.Photo)" #fileInput>
           </div>
         </div>
       </div>

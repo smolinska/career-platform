@@ -32,6 +32,9 @@
   display: flex;
   align-items: center;
   background-image: url("../../assets/img/job-bg1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .job-title-container {
     background-color: rgba(0, 0, 0, 0.24);
     padding: $medium-padding;
@@ -50,7 +53,10 @@
 }
 
 .job-application-wrapper {
-  background-image: url("../../assets/img/job-bg.png");
+  background-image: url("../../assets/img/job-bg2.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
   .job-application-container {
     color: $grey;
     background: $bg-grey;

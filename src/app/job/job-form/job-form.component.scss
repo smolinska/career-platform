@@ -14,6 +14,14 @@
   cursor: pointer;
 }
 
+%input-valid {
+  background-image: url('../../../assets/img/check.png');
+  background-repeat: no-repeat;
+  background-size: 16px;
+  color: $text-blue;
+  font-weight: bold;
+}
+
 @media (min-width: 768px) {
   .col-md-push-6 {
     left: 50%;
@@ -53,11 +61,19 @@ input, textarea {
   border-radius: 0;
 }
 
-
-
 input.ng-invalid.ng-touched {
   border: 1px solid red;
   color: red;
+}
+
+input.ng-valid {
+  @extend %input-valid;
+  background-position: 98%;
+}
+
+textarea.ng-valid {
+  @extend %input-valid;
+  background-position: 98% 8%;
 }
 
 .input-label {
@@ -69,6 +85,11 @@ input.ng-invalid.ng-touched {
   height: 40px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 0 12px 0 0;
+  img {
+    width: 16px;
+  }
 }
 
 .flex-group {
@@ -77,6 +98,10 @@ input.ng-invalid.ng-touched {
 
 .wider-group {
   flex-grow: 3;
+}
+
+.not-expandable {
+  max-width: 380px;
 }
 
 .smaller-group {
@@ -88,6 +113,9 @@ input.ng-invalid.ng-touched {
   display: flex;
   .upload-label {
     @extend %blue-button;
+    .error {
+      color: red;
+    }
   }
   .no-bottom-margin {
     margin-bottom: 0;
@@ -113,6 +141,10 @@ input.ng-invalid.ng-touched {
     flex-direction: column-reverse;
   }
   @media (min-width: 1200px) and (max-width: 787px) {
+    align-items: center;
+  }
+  .left-col {
+    display: flex;
     align-items: center;
   }
 }

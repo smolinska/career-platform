@@ -11,3 +11,9 @@ export class JobApplication {
   photo?: string|any;
   sendCopy: boolean;
 }
+
+export enum FileTypes {
+  Resume = 'resume',
+  Portfolio = 'portfolio',
+  Photo = 'photo',
+}
