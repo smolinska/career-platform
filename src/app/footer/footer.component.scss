@@ -2,6 +2,9 @@
 
 .footer {
   padding: $big-padding 0;
+  @media (max-width: 575px) {
+    padding: $big-padding $medium-padding;
+  }
 }
 
 .footer-section {

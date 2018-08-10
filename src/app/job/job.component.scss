@@ -9,6 +9,9 @@
 
 .section {
   padding: $big-padding 0;
+  @media (max-width: 575px) {
+    padding: $big-padding $medium-padding;
+  }
 }
 
 .header {
@@ -36,7 +39,7 @@
   background-size: cover;
   background-position: center;
   .job-title-container {
-    background-color: rgba(0, 0, 0, 0.24);
+    background-color: rgba(0, 0, 0, 0.41);
     padding: $medium-padding;
     .title {
       @extend %text-centered;
@@ -47,9 +50,6 @@
       font-size: 40px;
     }
   }
-}
-
-.job-form-wrapper {
 }
 
 .job-application-wrapper {
